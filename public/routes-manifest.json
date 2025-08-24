@@ -1,0 +1,42 @@
+{
+  "version": 3,
+  "pages404": true,
+  "basePath": "",
+  "redirects": [],
+  "rewrites": [],
+  "headers": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about/?$"
+    },
+    {
+      "page": "/contact", 
+      "regex": "^/contact/?$"
+    },
+    {
+      "page": "/services",
+      "regex": "^/services/?$"
+    },
+    {
+      "page": "/projects",
+      "regex": "^/projects/?$"
+    },
+    {
+      "page": "/insights",
+      "regex": "^/insights/?$"
+    }
+  ],
+  "dynamicRoutes": [
+    {
+      "page": "/services/[id]",
+      "regex": "^/services/([^/]+?)/?$"
+    }
+  ],
+  "dataRoutes": [],
+  "i18n": false
+}

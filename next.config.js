@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  distDir: 'out',
   images: { 
     unoptimized: true,
   },
@@ -9,13 +10,15 @@ const nextConfig = {
   // Performance optimizations
   swcMinify: true,
   
-  // Disable server-only features for static export
+  // Disable ALL server features for static export
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
+  
+
 };
 
 module.exports = nextConfig;
