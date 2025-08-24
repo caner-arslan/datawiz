@@ -138,7 +138,6 @@ export default function HomePage() {
             webkit-playsinline="true"
           >
             <source src="/media/hero-video.mp4" type="video/mp4" />
-            <track kind="captions" src="/media/hero-video-captions.vtt" srcLang="tr" label="Türkçe" />
           </video>
           
           {/* Softer overlay for a more airy look */}
