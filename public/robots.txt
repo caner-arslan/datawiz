@@ -1,0 +1,12 @@
+# DataWiz - Operasyon ve ERP Çözümleri
+User-agent: *
+Allow: /
+
+# Block admin areas (when added)
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://datawiz.com.tr/sitemap.xml
+
+

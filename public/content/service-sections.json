@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "services#operasyon-takip",
+    "title": "Operasyon takip uygulamaları",
+    "text": "Sektöre özel uçtan uca operasyon ve raporlama panoları ile sahadan ofise tek bir akış.",
+    "cta": "Örneği gör",
+    "image": "/media/placeholder-1.jpg"
+  },
+  {
+    "slug": "services#erp-hizlandirici",
+    "title": "ERP hızlandırıcı arayüzler",
+    "text": "Belirli ekipler için özelleşen ekranlarla ERP üzerindeki işlemleri %60’a varan hızlandırma.",
+    "cta": "Nasıl çalışıyor?",
+    "image": "/media/placeholder-2.jpg"
+  },
+  {
+    "slug": "services#raporlama-otomasyonu",
+    "title": "Arka plan raporlama/hesaplama",
+    "text": "Periyodik toplu işler, veri temizleme ve özetleme ile manuel raporlamayı minimuma indirir.",
+    "cta": "Akışı incele",
+    "image": "/media/placeholder-3.jpg"
+  },
+  {
+    "slug": "services#ai-raporlama",
+    "title": "AI ile doğal dille raporlar (beta)",
+    "text": "Veritabanlarına doğal dil komutları ile anlık rapor ve içgörü oluşturma.",
+    "cta": "Demo iste",
+    "image": "/media/placeholder-1.jpg"
+  }
+]
+
+

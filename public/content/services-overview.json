@@ -1,0 +1,38 @@
+[
+  {
+    "id": "operasyon-takip",
+    "title": "Operasyon Takip",
+    "headline": "Sahadaki her hareketiniz, anında merkeze ulaşır.",
+    "story": "Artık ekiplerinizin nerede olduğunu, ne yaptığını tahmin etmeye çalışmayın. Her adım, her işlem, her veri anında görünür hale gelir. Saha ekipleriniz kendi işlerine odaklanırken, siz tüm operasyonları tek ekrandan takip edersiniz.",
+    "benefit": "Süreçleriniz şeffaf, ekipleriniz koordineli, verimliliğiniz maksimum.",
+    "visual": "📍",
+    "color": "from-blue-500 to-cyan-500"
+  },
+  {
+    "id": "erp-arayuzler",
+    "title": "ERP Hızlandırıcı",
+    "headline": "Karmaşık sistemler, basit arayüzler.",
+    "story": "ERP sistemlerinizin karmaşıklığı artık ekiplerinizin önünde engel değil. Her departman kendi işine odaklanır, sistem arka planda çalışır. Satış ekibi satış yapar, muhasebe muhasebe yapar - sistem karmaşıklığı kimseyi rahatsız etmez.",
+    "benefit": "Ekipleriniz sistemle değil, işleriyle uğraşır.",
+    "visual": "⚡",
+    "color": "from-purple-500 to-pink-500"
+  },
+  {
+    "id": "arka-plan-uygulamalari",
+    "title": "Arka Plan Otomasyonu",
+    "headline": "Verileriniz sizin için çalışır.",
+    "story": "Manuel hesaplamalar, tekrarlayan raporlar, zaman alan işlemler artık geçmişte kaldı. Verileriniz siz uyurken bile çalışır. Günlük raporlar otomatik hazırlanır, hesaplamalar arka planda yapılır, veriler temizlenir ve analiz edilir.",
+    "benefit": "Zamanınız değerli işlere, verileriniz rutin işlere.",
+    "visual": "🤖",
+    "color": "from-green-500 to-emerald-500"
+  },
+  {
+    "id": "ai-raporlama",
+    "title": "AI Raporlama",
+    "headline": "Sorularınızı doğal dille sorun.",
+    "story": "Karmaşık sorgular, teknik raporlar artık gerekli değil. Verilerinizle sohbet edin, istediğiniz bilgiyi anında alın. 'Bu ay en çok satan ürün hangisi?' diye sorun, cevabı anında alın. Veri analizi artık herkesin yapabileceği bir iş.",
+    "benefit": "Veri analizi artık herkesin işi.",
+    "visual": "🧠",
+    "color": "from-orange-500 to-red-500"
+  }
+]

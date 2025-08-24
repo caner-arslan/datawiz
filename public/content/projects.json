@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Mini tahsilat sitesi",
+    "metric": "1 haftada 100 sipariş",
+    "desc": "Hosted checkout + serverless webhook ile esnek ve düşük maliyetli ödeme akışı.",
+    "image": "/media/placeholder-1.jpg"
+  },
+  {
+    "name": "ERP hızlandırıcı",
+    "metric": "İşlem süresi -%60",
+    "desc": "Ekip özelinde arayüzler ile kritik süreçlerde hız kazanımı.",
+    "image": "/media/placeholder-2.jpg"
+  },
+  {
+    "name": "Raporlama otomasyonu",
+    "metric": "Manuel rapor -%80",
+    "desc": "Arka plan işleri ile periyodik raporların otomasyonu.",
+    "image": "/media/placeholder-3.jpg"
+  }
+]
+
+
