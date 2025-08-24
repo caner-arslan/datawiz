@@ -1,7 +1,6 @@
-"use client";
-
-import { useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
+import { promises as fs } from 'fs';
+import path from 'path';
 
 interface Service {
   id: string;
@@ -17,44 +16,20 @@ interface ServiceDetailPageProps {
   params: { id: string };
 }
 
-export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
-  const [service, setService] = useState<Service | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchService = async () => {
-      try {
-        const response = await fetch('/content/services-overview.json');
-        const services: Service[] = await response.json();
-        const foundService = services.find(s => s.id === params.id);
-        
-        if (!foundService) {
-          notFound();
-          return;
-        }
-        
-        setService(foundService);
-      } catch (error) {
-        console.error('Failed to fetch service:', error);
-        notFound();
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchService();
-  }, [params.id]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent-500 mx-auto mb-4"></div>
-          <p className="text-brand-700">Yükleniyor...</p>
-        </div>
-      </div>
-    );
+async function getService(id: string): Promise<Service | null> {
+  try {
+    const filePath = path.join(process.cwd(), 'public/content/services-overview.json');
+    const fileContents = await fs.readFile(filePath, 'utf8');
+    const services: Service[] = JSON.parse(fileContents);
+    return services.find(s => s.id === id) || null;
+  } catch (error) {
+    console.error('Failed to fetch service:', error);
+    return null;
   }
+}
+
+export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
+  const service = await getService(params.id);
 
   if (!service) {
     notFound();
