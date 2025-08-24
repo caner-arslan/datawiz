@@ -7,33 +7,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://datawiz.works/services</loc>
+    <loc>https://datawiz.works/#erp</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://datawiz.works/about</loc>
+    <loc>https://datawiz.works/#operasyon</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://datawiz.works/#otomasyon</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://datawiz.works/#ozel-gelistirme</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://datawiz.works/contact</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://datawiz.works/projects</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://datawiz.works/insights</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>
