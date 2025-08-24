@@ -219,21 +219,7 @@ export default function HomePage() {
 
       </section>
 
-      {/* Global Section Transition Divider - Hero to ERP */}
-      <div className="absolute left-0 w-full h-[200px] pointer-events-none z-[9999]" style={{top: 'calc(100vh - 100px)'}}>
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(to bottom, 
-              rgba(255, 255, 255, 0) 0%,
-              rgba(255, 255, 255, 0.5) 25%,
-              rgba(255, 255, 255, 1) 50%,
-              rgba(255, 255, 255, 0.5) 75%,
-              rgba(255, 255, 255, 0) 100%
-            )`
-          }}
-        />
-      </div>
+
 
       {/* ERP Hızlandırıcı Section */}
       <section className="relative bg-white py-20 md:py-32 overflow-hidden">
