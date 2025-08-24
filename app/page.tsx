@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import HeroVideo from '@/components/HeroVideo';
 import AnimatedLogo from '@/components/AnimatedLogo';
 
@@ -11,6 +11,8 @@ export default function HomePage() {
   const [showWhatsAppButton, setShowWhatsAppButton] = useState(false);
   const [showCookieBanner, setShowCookieBanner] = useState(false);
   const [showCookieModal, setShowCookieModal] = useState(false);
+  
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +31,52 @@ export default function HomePage() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Video autoplay için mobile fix
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const playVideo = async () => {
+      try {
+        await video.play();
+      } catch (error) {
+        console.log('Autoplay failed, user interaction required');
+        // Mobilde autoplay başarısız olursa poster göster
+        video.poster = "/media/video-poster.jpg";
+      }
+    };
+
+    // Intersection Observer ile video görünür olduğunda play
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            playVideo();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+
+    // User interaction sonrası play dene
+    const handleFirstInteraction = () => {
+      playVideo();
+      document.removeEventListener('touchstart', handleFirstInteraction);
+      document.removeEventListener('click', handleFirstInteraction);
+    };
+
+    document.addEventListener('touchstart', handleFirstInteraction);
+    document.addEventListener('click', handleFirstInteraction);
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('touchstart', handleFirstInteraction);
+      document.removeEventListener('click', handleFirstInteraction);
+    };
   }, []);
 
   // Cookie consent check
@@ -129,15 +177,19 @@ export default function HomePage() {
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
           <video
+            ref={videoRef}
             className="w-full h-full object-cover"
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
-            webkit-playsinline="true"
+            webkit-playsinline=""
+            controls={false}
+            poster="/media/video-poster.jpg"
           >
             <source src="/media/hero-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
           
           {/* Softer overlay for a more airy look */}
