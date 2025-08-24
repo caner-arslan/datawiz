@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'DataWiz - ERP Entegrasyonu ve Operasyon Takip Sistemleri',
     description: 'ERP hızlandırıcı arayüzler ve operasyon takip uygulamaları ile işletmenizin dijital dönüşümünü hızlandırın. Logo, Netsis, Mikro ERP entegrasyonu.',
-    url: 'https://datawiz.com.tr',
+    url: 'https://datawiz.works',
     siteName: 'DataWiz',
     type: 'website',
     locale: 'tr_TR',
     images: [
       {
-        url: 'https://datawiz.com.tr/logo.svg',
+        url: 'https://datawiz.works/logo.svg',
         width: 1200,
         height: 630,
         alt: 'DataWiz - ERP ve Operasyon Çözümleri',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'DataWiz - ERP Entegrasyonu ve Operasyon Takip Sistemleri',
     description: 'ERP hızlandırıcı arayüzler ve operasyon takip uygulamaları ile işletmenizin dijital dönüşümünü hızlandırın.',
-    images: ['https://datawiz.com.tr/logo.svg'],
+    images: ['https://datawiz.works/logo.svg'],
   },
 };
 
@@ -44,6 +44,10 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
+        {/* SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
